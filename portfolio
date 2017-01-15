@@ -1,0 +1,30 @@
+#!/usr/bin/ruby
+# myapp.rb
+require 'sinatra'
+require 'pry'
+
+get '/' do
+  erb :main
+end
+
+
+get '/views/riverside' do
+  @name = "150 N riverside"
+  @type = "hospitality"
+  @img  = "http://150northriverside.com/wp-content/uploads/slide-tower-southeast-v2.jpg"
+  erb :view
+end
+
+get '/views/Fauber' do
+  @name = "Fauber Residence"
+  @type = "Residential Project"
+  @img  = "http://cdn.archinect.net/images/1200x/3f/3fgf26nyj4eo1kyz.jpg"
+  erb :view
+end
+
+get '/views/Float_Sixty' do
+  @name = "Float Sixty"
+  @type = "Commercial Project"
+  @img  = "http://newschicago.net/wp-content/uploads/sites/28/2015/12/attachment1.png.jpeg"
+  erb :view
+end
